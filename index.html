@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF 8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>coba</title>
+        <link rel="stylesheeet" href="coba.css">
+    </head>
+    <body>
+        <h1>Temperature Converter</h1>
+        <input id="input" type="number" placeholder=""> <button id="btn" onclick="btnFunction()">Convert</button>
+
+        <h3 class="judul">Celcius   : <span id="Celcius"></span></h3>
+        <h3>Fahrenheit : <span id="Fahrenheit"></span></h3>
+        <h3>Kelvin    : <span id="Kelvin"></span></h3>
+        <script>
+            function btnFunction(){
+                var input = document.getElementById("input").value;
+                var Celcius = input;
+                var Fahrenheit = (input*1.8) + 32;
+                var Kelvin = parseInt(input) + 273.15;
+
+                document.getElementById("Celcius").innerHTML = "";
+                document.getElementById("Celcius").innerHTML +=Celcius +" Celcius";
+
+                document.getElementById("Fahrenheit").innerHTML = "";
+                document.getElementById("Fahrenheit").innerHTML +=Fahrenheit +" Fahrenheit";
+
+                document.getElementById("Kelvin").innerHTML = "";
+                document.getElementById("Kelvin").innerHTML +=Kelvin +" Kelvin";
+            }
+        </script>
+    </body>
+</html>
